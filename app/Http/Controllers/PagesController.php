@@ -33,7 +33,7 @@ class PagesController extends Controller
 
         $FindPoll = Polls::where('votecode',$Poll_Id)->get();
         if($FindPoll->isEmpty()){
-            return redirect('/SearchPoll')->with('error','Unable to Locate your Vote Code. Please Cross check ');
+            return redirect('/SubmitPoll')->with('error','Unable to locate Poll,Check code and try again!!!');
         }
         else{
             return $FindPoll;
