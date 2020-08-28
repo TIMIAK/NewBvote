@@ -23,4 +23,5 @@ Route::get('/About','PagesController@about');
 Route::get('/Services','PagesController@services');
 Route::get('/CreatePoll','PagesController@createpoll');
 Route::get('/SubmitPoll','PagesController@submitpoll');
-Route::get('SubmitCreatePoll','VoteController@store');
+Route::get('/SubmitCreatePoll','VoteController@store');
+Route::get('/SearchPoll','PagesController@SearchPoll');

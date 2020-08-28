@@ -8,7 +8,7 @@
         </div>
         <hr>
         <div class="text-center" style="margin-top: 100px">
-            <a href="/createvote" class="btn btn-outline-primary btn-lg">Create Vote</a> <a href="/submitvote" class="btn btn-outline-success btn-lg">Submit Vote</a>
+            <a href="/CreatePoll" class="btn btn-outline-primary btn-lg">Create Vote</a> <a href="/SubmitPoll" class="btn btn-outline-success btn-lg">Submit Vote</a>
         </div>
     </div>
 </div>
