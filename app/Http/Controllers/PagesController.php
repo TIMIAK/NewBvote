@@ -47,9 +47,8 @@ class PagesController extends Controller
                         return redirect('/SubmitPoll')->with('error','We are sorry You are not allowed to take part in this Poll');
                     }
                     else{
-                        return 123;
+                        return redirect('Cast/'.$Poll_Id.'/');
                     }
-
                 }
                 /*
                 if(in_array($Voters_Email,$Exploded_Allowed_Emails)){

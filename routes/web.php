@@ -25,3 +25,4 @@ Route::get('/CreatePoll','PagesController@createpoll');
 Route::get('/SubmitPoll','PagesController@submitpoll');
 Route::get('/SubmitCreatePoll','VoteController@store');
 Route::get('/SearchPoll','PagesController@SearchPoll');
+Route::get('/Cast/{Poll_Id}/','VoteController@show');

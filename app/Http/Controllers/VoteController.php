@@ -69,7 +69,15 @@ class VoteController extends Controller
      */
     public function show($id)
     {
-        //
+        //$Polls = new Polls;
+        //$Poll_Detai = Polls::find($id);
+        //return $id;
+        $Polls = new Polls;
+        //$post = Polls::find($id);
+        //return $post;
+        $Post_Detail = Polls::where('votecode',$id)->get();
+        //print_r($Poll_Details) ?? 'No Value';
+        return view('Vote.Cast')->with('Post_Detail',$Post_Detail);
     }
 
     /**
