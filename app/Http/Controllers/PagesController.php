@@ -36,7 +36,32 @@ class PagesController extends Controller
             return redirect('/SubmitPoll')->with('error','Unable to locate Poll,Check code and try again!!!');
         }
         else{
-            return $FindPoll;
+            foreach($FindPoll as $FindPol){
+                $Allowed_Emails = $FindPol['Email_Of_Voters'];
+                $Exploded_Allowed_Emails = explode(',',$Allowed_Emails);
+                $Voters_Email = strtolower($Voters_Email);
+
+                foreach($Exploded_Allowed_Emails as $Exploded_Allowed_Email){
+                    $Emails = strtolower($Exploded_Allowed_Email);
+                    if($Voters_Email != $Emails){
+                        return redirect('/SubmitPoll')->with('error','We are sorry You are not allowed to take part in this Poll');
+                    }
+                    else{
+                        return 123;
+                    }
+
+                }
+                /*
+                if(in_array($Voters_Email,$Exploded_Allowed_Emails)){
+                    return 123;
+                }
+                else{
+                    return 'Lies';
+                }
+                */
+
+            }
+
         }
     }
 }

@@ -9,17 +9,11 @@
         <form action="/SubmitCreatePoll" method="PUT">
             <div class="form-group">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col">
                         <label for="votetitle" class="text-danger">Title</label>
-                        <input type="text" name="Vote_Title" class="form-control" id="votetitle" placeholder="Enter Title" required>
+                        <input type="text" name="Vote_Title" class="form-control" id="votetitle" placeholder="Enter Title" autofocus required>
                     </div>
-                    <div class="col-6">
-                        <label for="votetitle" class="text-danger">Name of Contestant ( <small>If more than one seperate with a comma " , "</small> )</label>
-                        <div class="input-group">
-                            <input type="text" id="Name_of_Contestant" name="Name_of_Contestant" class="form-control" placeholder="Name of Contestant" required>
 
-                        </div>
-                    </div>
 
                 </div>
                 <hr>
@@ -30,6 +24,15 @@
                             <input type="text" class="form-control" id="Email_Of_Voters" name="Email_Of_Voters" placeholder="Email Address of Voters" required>
                             <div class="input-group-append">
                         </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="votetitle" class="text-danger">Name of Contestant (<small>If more than one seperate with a comma ","</small>)</label>
+                        <div class="input-group">
+                            <input type="text" id="Name_of_Contestant" name="Name_of_Contestant" class="form-control" placeholder="Name of Contestant" required>
+
                         </div>
                     </div>
                 </div>
